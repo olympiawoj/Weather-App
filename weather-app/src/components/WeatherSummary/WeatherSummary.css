@@ -1,0 +1,4 @@
+.weather-summary {
+  display: flex;
+  height: 200px;
+}
