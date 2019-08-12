@@ -19,7 +19,7 @@ class App extends Component {
         //array of objects
         let weatherDataRes = res.data.list.flat();
         const filteredList = weatherDataRes.filter(obj =>
-          obj.dt_txt.includes("12:00:00")
+          obj.dt_txt.includes("3:00:00")
         );
         console.log("result", filteredList);
         // console.log("res", weatherDataRes);

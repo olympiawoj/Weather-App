@@ -4,7 +4,17 @@ import "./WeatherCard.css";
 const WeatherCard = props => {
   const iconMap = {
     "clear sky": "01d",
-    "few clouds": "02d"
+    "few clouds": "02d",
+    "scattered clouds": "03d",
+    "broken clouds": "04d",
+    "shower rain": "09d",
+    rain: "10d",
+    thunderstorm: "11d",
+    "light rain": "10d",
+    snow: "13d",
+    mist: "50d",
+    "overcast clouds": "04d",
+    "moderate rain": "10d"
   };
 
   let url = null;
