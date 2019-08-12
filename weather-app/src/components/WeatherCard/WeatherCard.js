@@ -24,10 +24,22 @@ const WeatherCard = props => {
   }
 
   console.log("Weather Card props", props);
+  const day = new Date(props.date).getDay();
+
+  const weekday = new Array(7);
+  weekday[0] = "Sun";
+  weekday[1] = "Mon";
+  weekday[2] = "Tues";
+  weekday[3] = "Weds";
+  weekday[4] = "Thurs";
+  weekday[5] = "Fri";
+  weekday[6] = "Sat";
+
+  console.log({ day });
   //ideally img src is dynamic, pointing to the image
   return (
     <div className="weather-card">
-      {props.date}
+      {weekday[day]}
       <div>{props.weatherDes}</div>
       <img src={url} />
     </div>
