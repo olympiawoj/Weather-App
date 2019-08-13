@@ -33,10 +33,11 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
+
   render() {
     return (
       <div className="App">
-        <Searchbar />
+        <Searchbar zipCode={this.state.zipCode} />
         <WeatherSummary weatherData={this.state.weatherData} />
       </div>
     );
