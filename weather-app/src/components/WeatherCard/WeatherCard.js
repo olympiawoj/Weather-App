@@ -14,7 +14,8 @@ const WeatherCard = props => {
     snow: "13d",
     mist: "50d",
     "overcast clouds": "04d",
-    "moderate rain": "10d"
+    "moderate rain": "10d",
+    "heavy intensity rain": "10d"
   };
 
   let url = null;
@@ -35,13 +36,15 @@ const WeatherCard = props => {
   weekday[5] = "Fri";
   weekday[6] = "Sat";
 
-  console.log({ day });
   //ideally img src is dynamic, pointing to the image
   return (
     <div className="weather-card">
       {weekday[day]}
       <div>{props.weatherDes}</div>
-      <img src={url} />
+      <img className="weather-icon" src={url} />
+      <div>
+        {props.maxTemp} {props.minTemp}
+      </div>
     </div>
   );
 };

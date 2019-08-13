@@ -1,4 +1,6 @@
 .weather-summary {
   display: flex;
+  justify-content: center;
   height: 200px;
+  margin: 0 auto;
 }

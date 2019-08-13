@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 import WeatherSummary from "./components/WeatherSummary/WeatherSummary";
+import Searchbar from "./components/Searchbar/Searchbar";
+import "./App.css";
 
 class App extends Component {
   state = {
-    weatherData: []
+    weatherData: [],
+    zipCode: null
   };
 
   //&APPID=21fbf805dfac9a100b54b4d49657f673
@@ -32,7 +35,8 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="App">
+        <Searchbar />
         <WeatherSummary weatherData={this.state.weatherData} />
       </div>
     );
