@@ -15,7 +15,11 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/* .weather-icon {
-  width: 50%;
-  border: 1px solid red;
-} */
+.emoji {
+  font-size: 75px;
+}
+
+.temp {
+  display: flex;
+  justify-content: space-around;
+}

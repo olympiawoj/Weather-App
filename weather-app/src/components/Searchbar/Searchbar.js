@@ -1,21 +1,20 @@
 import React from "react";
 
 const Searchbar = props => {
-  const searchZipcode = () => {
-    console.log("zip");
-  };
-
   console.log({ props });
   return (
-    <form className="searchbar" onSubmit={searchZipcode}>
-      <span onClick={searchZipcode}>🔍</span>
+    <form className="searchbar" onSubmit={props.searchZipcode}>
+      <span aria-label="🔍" role="img" onClick={props.searchZipcode}>
+        🔍
+      </span>
       <input
         className="input"
         type="text"
         pattern="[0-9]*"
         name=""
-        placeholder=" Search Zip Code"
+        placeholder=" Search zip code"
         value={props.zipCode}
+        onChange={event => props.handleChange(event)}
       />
     </form>
   );

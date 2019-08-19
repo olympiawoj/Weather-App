@@ -3,6 +3,9 @@ import "./WeatherCard.css";
 
 const WeatherCard = props => {
   const iconMap = {
+    // "clear sky": "01d",
+    // ⛅
+
     "clear sky": "01d",
     "few clouds": "02d",
     "scattered clouds": "03d",
@@ -15,7 +18,12 @@ const WeatherCard = props => {
     mist: "50d",
     "overcast clouds": "04d",
     "moderate rain": "10d",
+    // "moderate rain": "🌧",
     "heavy intensity rain": "10d"
+  };
+
+  const emojiMap = {
+    "clear sky": ":sky"
   };
 
   let url = null;
@@ -42,8 +50,12 @@ const WeatherCard = props => {
       {weekday[day]}
       <div>{props.weatherDes}</div>
       <img className="weather-icon" src={url} />
-      <div>
-        {props.maxTemp} {props.minTemp}
+      {/* <span aria-label={props.weatherDes} className="emoji" role="img">
+        {iconMap[props.weatherDes]}
+      </span> */}
+      <div className="temp">
+        <p>{props.maxTemp}&deg; </p>
+        <p>{props.minTemp}&deg;</p>
       </div>
     </div>
   );
